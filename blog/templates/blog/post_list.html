@@ -1,33 +1,18 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<title>Celebs Vs Cartoons</title>
-		<link type="text/css" rel="stylesheet" href="battle.css" />
-	</head>
-	<body>
-		<div class="key"><a href="">Home</a></div>
-		<div class="key"><a href="">About</a></div>
-		<div class="key"><a href="">Competitors</a></div>
-		<div class="key"><a href="">LeaderBoard</a></div>
-		<div class="key" id="email"><a href="">Get Email Updates</a></div>
-		<div id="line"></div>
-		<div><img class="intro" src="file://C:\linkpage\NEW.jpg"/></div>
-		<div class="main">
-			<div id="celeb"><a href="file://D:\Softwares\Notepad ++\battle2.html"><img class="celeb" src="http://i1.tribune.com.pk/wp-content/uploads/2015/06/899912-a-1433771722-619-640x480.jpg"/></a></div>
-			<div id="cart"><a href="file://D:\\Softwares\Notepad ++\battle3.html"><img class="cart" src="http://img.lum.dolimg.com/v1/images/open-uri20150422-20810-1uc5daw_96b0b8de.jpeg"/></a></div>
-			<div id="text">
-				<p id="one">Choose more Entertaining one</p>
-				<p id="two">Click on Image to choose</p>
-			</div>
-		</div>
-		<div class="footer">
-			<marquee Direction=right>Result will Publish on 3rd October 2016</marquee>
-				<div class="key2"><a href="">Suggestion</a></div>
-				<div class="key2"><a href="">Feedback</a></div>
-				<div class="key2" id="vats">Vats Productions</div>
-
-			<form>
-			</form>
-		</div>
-	</body>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django Girls Blog</a></h1>
+        </div>
+        {% for post in posts %}
+        <div>
+          <p>Published:{{post.published_date}}</p>
+          <h1><a href=" ">{{post.title}}</a></h1>
+          <p>{{post.text|linebreaksbr}}</p>
+        </div>
+            {{ post }}
+        {% endfor %}
+    </body>
 </html>
